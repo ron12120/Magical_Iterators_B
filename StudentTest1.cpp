@@ -1,7 +1,7 @@
 #include "doctest.h"
 #include "sources/MagicalContainer.hpp"
 #include <stdexcept>
-
+#include <iostream>
 using namespace ariel;
 using namespace std;
 // Test case for adding elements to the MagicalContainer
@@ -109,7 +109,7 @@ TEST_CASE("PrimeIterator") {
     container.addElement(4);
     container.addElement(5);
     container.addElement(6);
-
+    
     SUBCASE("Iterating over elements") {
         MagicalContainer::PrimeIterator it(container);
         CHECK(*it == 2);
